@@ -32,7 +32,7 @@ public class Inicio extends AppCompatActivity {
         BtnConfDevice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent ConfIntent = new Intent(Inicio.this, Config_Device.class );
+                Intent ConfIntent = new Intent(Inicio.this, Parent_Device.class );
                 startActivity(ConfIntent);
             }
         });

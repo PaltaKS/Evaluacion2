@@ -19,7 +19,7 @@
             android:name=".Control_Device"
             android:exported="false" />
         <activity
-            android:name=".Config_Device"
+            android:name=".Parent_Device"
             android:exported="false" />
         <activity
             android:name=".Register"

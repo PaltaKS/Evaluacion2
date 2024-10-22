@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Config_Device extends AppCompatActivity {
+public class Parent_Device extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
