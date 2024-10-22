@@ -2,6 +2,7 @@ package com.example.evaluacion_2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,6 +18,7 @@ public class LogIn extends AppCompatActivity {
     private EditText IdUser;
     private EditText IdPass;
     private Button SessionInButton;
+    private Button RegisterButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class LogIn extends AppCompatActivity {
         IdUser = findViewById(R.id.EditTextUserName);
         IdPass = findViewById(R.id.EditTextPassword);
         Button IdBtnIn = findViewById(R.id.SessionInButton);
+        Button IdBtnRegis = findViewById(R.id.RegisterButton);
 
         //Configurar Listener para el Boton
 
@@ -60,5 +63,20 @@ public class LogIn extends AppCompatActivity {
 
             }
         });
+
+        // Implementacion Button Register User
+
+        IdBtnRegis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent InRegister = new Intent(LogIn.this, Register.class);
+
+                    Toast.makeText(LogIn.this, "Registrar", Toast.LENGTH_SHORT).show();
+
+                startActivity(InRegister);
+            }
+        });
+
+
     }
 }
