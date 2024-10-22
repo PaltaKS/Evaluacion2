@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/BtnConfDevice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Emparejar dispositivo" />
@@ -31,9 +31,20 @@
             android:layout_height="24dp" />
 
         <Button
+            android:id="@+id/BtnControlDevices"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Control de Dispositivos" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+        <Button
+            android:id="@+id/BtnProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ver Perfil" />
 
         <Space
             android:layout_width="match_parent"

@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Evaluacion_2"
         tools:targetApi="31">
         <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".Control_Device"
+            android:exported="false" />
+        <activity
+            android:name=".Config_Device"
+            android:exported="false" />
+        <activity
             android:name=".Register"
             android:exported="false" />
         <activity
