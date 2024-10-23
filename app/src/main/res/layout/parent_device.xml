@@ -46,10 +46,10 @@
 
         <Button
             android:id="@+id/RegisterDeviceBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
             android:text="Registrar Dispositivo" />
 
         <Space
@@ -57,11 +57,21 @@
             android:layout_height="8dp" />
 
         <Button
-            android:id="@+id/ExitBtn"
-            android:layout_width="wrap_content"
+            android:id="@+id/ListDeviceBtn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:text="Lista de Dispositivos" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <Button
+            android:id="@+id/ExitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
             android:text="Salir" />
 
     </LinearLayout>
