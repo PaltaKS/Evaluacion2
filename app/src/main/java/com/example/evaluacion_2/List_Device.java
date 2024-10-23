@@ -43,17 +43,9 @@ public class List_Device extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
         BackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent BackBtn = new Intent(List_Device.this, Parent_Device.class);
-                    Toast.makeText(List_Device.this, "Emparejar Dispositivos", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });

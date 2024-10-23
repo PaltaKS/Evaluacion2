@@ -67,7 +67,6 @@ public class Parent_Device extends AppCompatActivity {
         ExitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Exit = new Intent(Parent_Device.this, Inicio.class);
                 finish();
             }
         });

@@ -52,8 +52,7 @@ public class Register extends AppCompatActivity {
         BtnClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent CloseRegister = new Intent(Register.this, LogIn.class);
-                    Toast.makeText(Register.this, "Cerrar Registro", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Register.this, "Cerrar Registro", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
