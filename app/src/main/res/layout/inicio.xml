@@ -43,6 +43,17 @@
             android:layout_height="24dp" />
 
         <Button
+            android:id="@+id/btnViewActionLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ver Registro de Acciones" />
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+        <Button
             android:id="@+id/BtnProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,5 +68,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cerrar Sesion" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
