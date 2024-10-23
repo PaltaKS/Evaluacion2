@@ -7,4 +7,54 @@
     android:layout_height="match_parent"
     tools:context=".DeleteAccount">
 
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvDeleteAccountTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar Cuenta"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/tvDeleteAccountInstruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Por favor, ingrese su contraseña para eliminar la cuenta."
+            android:layout_gravity="center"
+            android:padding="8dp"/>
+
+        <EditText
+            android:id="@+id/EditTextPasswordDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:padding="8dp"/>
+
+        <Button
+            android:id="@+id/btnDeleteAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eliminar Cuenta"
+            android:background="@color/design_default_color_error"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volver"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
