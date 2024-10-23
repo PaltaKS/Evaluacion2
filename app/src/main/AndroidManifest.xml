@@ -13,6 +13,13 @@
         android:theme="@style/Theme.Evaluacion_2"
         tools:targetApi="31">
         <activity
+            android:name=".DeleteAccount"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.DeleteAccount"
+            android:exported="false"
+            android:label="@string/title_activity_delete_account" />
+        <activity
             android:name=".Control_Device"
             android:exported="false" />
         <activity

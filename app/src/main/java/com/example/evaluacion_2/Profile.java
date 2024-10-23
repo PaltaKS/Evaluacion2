@@ -1,24 +1,50 @@
 package com.example.evaluacion_2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class Profile extends AppCompatActivity {
+
+    private Button btnDeleteAccount, btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.profile);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        // Catch ID del XML to Profile
+
+        btnDeleteAccount = findViewById(R.id.btnDeleteAccount);
+        btnBack = findViewById(R.id.btnBack);
+
+        // Funcionalidades Boton Eliminar Cuenta
+
+        btnDeleteAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent DeleteAccountBtn = new Intent(Profile.this, DeleteAccount.class);
+                    Toast.makeText(Profile.this, "Eliminar Cuenta", Toast.LENGTH_SHORT).show();
+                startActivity(DeleteAccountBtn);
+            }
         });
+
+        // Funcionalidad Boton Volver
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent BtnBack = new Intent(Profile.this, Inicio.class);
+                    Toast.makeText(Profile.this, "Inicio", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
+
+
     }
 }
