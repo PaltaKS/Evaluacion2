@@ -20,21 +20,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/TextViewInicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inicio"
+            android:textAlignment="center"
+            android:textSize="36dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
+
         <Button
             android:id="@+id/BtnConfDevice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Emparejar dispositivo" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="24dp" />
-
-        <Button
-            android:id="@+id/BtnControlDevices"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Control de Dispositivos" />
 
         <Space
             android:layout_width="match_parent"

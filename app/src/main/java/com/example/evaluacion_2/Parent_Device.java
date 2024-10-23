@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Parent_Device extends AppCompatActivity {
 
     private EditText NameDeviceInput, keyInput;
-    private Button RegisterDeviceBtn, ExitBtn;
+    private Button RegisterDeviceBtn, ExitBtn, ListDeviceBtn;
 
 
     @Override
@@ -28,6 +28,9 @@ public class Parent_Device extends AppCompatActivity {
         keyInput = findViewById(R.id.ClaveInput);
         RegisterDeviceBtn = findViewById(R.id.RegisterDeviceBtn);
         ExitBtn = findViewById(R.id.ExitBtn);
+        ListDeviceBtn = findViewById(R.id.ListDeviceBtn);
+
+        // Boton de Registrar Dispositivos
 
         RegisterDeviceBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +51,19 @@ public class Parent_Device extends AppCompatActivity {
             }
         });
 
+        // Boton de Lista de Dispositivos
+
+        ListDeviceBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ListDevice = new Intent(Parent_Device.this, List_Device.class );
+                    Toast.makeText(Parent_Device.this, "Lista de Dispostivos", Toast.LENGTH_SHORT).show();
+                startActivity(ListDevice);
+            }
+        });
+
+        // Boton de Regresa al Inicio
+
         ExitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,6 +75,7 @@ public class Parent_Device extends AppCompatActivity {
 
     }
 
+    //
 
     private void registerDevice(String deviceName, String deviceKey) {
 

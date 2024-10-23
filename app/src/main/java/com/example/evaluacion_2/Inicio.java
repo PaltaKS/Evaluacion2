@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Inicio extends AppCompatActivity {
 
-    private Button closeSesion, BtnConfDevice, BtnControlDevice, BtnProfile;
+    private Button closeSesion, BtnConfDevice, BtnProfile;
 
 
     @Override
@@ -24,7 +24,6 @@ public class Inicio extends AppCompatActivity {
 
         closeSesion = findViewById(R.id.CloseButton);
         BtnConfDevice = findViewById(R.id.BtnConfDevice);
-        BtnControlDevice = findViewById(R.id.BtnControlDevices);
         BtnProfile = findViewById(R.id.BtnProfile);
 
         //Funcionalidad Button Emperejar Dispositivo
@@ -34,16 +33,6 @@ public class Inicio extends AppCompatActivity {
             public void onClick(View view) {
                 Intent ConfIntent = new Intent(Inicio.this, Parent_Device.class );
                 startActivity(ConfIntent);
-            }
-        });
-
-        //Funcionalidad Button Control Dispositivo
-
-        BtnControlDevice.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent ControlIntent = new Intent(Inicio.this, Control_Device.class);
-                startActivity(ControlIntent);
             }
         });
 
