@@ -6,20 +6,30 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import com.example.evaluacion_2.models.Usuario;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class Register extends AppCompatActivity {
 
     private EditText EditTextUserName, EditTextRealName, EditTextEmail, EditTextPassword;
     private Button registerBtn;
+    private FirebaseDatabase database;
+    private DatabaseReference myRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
+
+        //Inicializa Firebase
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("usuarios");//"ususarios" sera la rama principal
 
         // Catch ID XML to register
         EditTextUserName = findViewById(R.id.EditTextUserName);
@@ -80,8 +90,15 @@ public class Register extends AppCompatActivity {
     }
 
     private void registerUser(String userName, String realName, String password, String email) {
-        // Futuro Codigo FireBase
-        Toast.makeText(this, "Usuario registrado con Exito", Toast.LENGTH_SHORT).show();
+        Usuario nuevoUsuario = new Usuario(realName, userName, password, email);
+        myRef.child(userName).setValue(nuevoUsuario)
+                .addOnSuccessListener(aVoid -> {
+                    Toast.makeText(Register.this, "Usuario registrado con éxito", Toast.LENGTH_SHORT).show();
+                    finish();
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(Register.this, "Error al registrar usuario", Toast.LENGTH_SHORT).show();
+                });
     }
 
 }
