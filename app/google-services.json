@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "571712863948",
+    "project_id": "sumativa3-b90a2",
+    "storage_bucket": "sumativa3-b90a2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571712863948:android:3d14320496737c84b44c69",
+        "android_client_info": {
+          "package_name": "com.example.evaluacion_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5cO8Q8WETIorDwDJWNsy2pJx2YaF6qXQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
